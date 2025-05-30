@@ -1,47 +1,103 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19664549&assignment_repo_type=AssignmentRepo)
-# MongoDB Fundamentals Assignment
+# 📚 PLP Bookstore - MongoDB Implementation
 
-This assignment focuses on learning MongoDB fundamentals including setup, CRUD operations, advanced queries, aggregation pipelines, and indexing.
+![MongoDB Logo](https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png)
 
-## Assignment Overview
+A complete implementation of a bookstore database using MongoDB, featuring CRUD operations, advanced queries, aggregation pipelines, and indexing optimization.
 
-You will:
-1. Set up a MongoDB database
-2. Perform basic CRUD operations
-3. Write advanced queries with filtering, projection, and sorting
-4. Create aggregation pipelines for data analysis
-5. Implement indexing for performance optimization
+## 📦 Project Structure
+```bash
+plp_bookstore/
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── insert_books.js # Database population script
+├── queries.js # All MongoDB query implementations
+└── README.md # This documentation
+```
 
-## Getting Started
+## 🚀 Getting Started
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
+### Prerequisites
 
-## Files Included
+- [Node.js](https://nodejs.org/) (v16+ recommended)
+- [MongoDB Community Server](https://www.mongodb.com/try/download/community) (v6.0+)
+- [MongoDB Compass](https://www.mongodb.com/try/download/compass) (Optional GUI)
 
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
+### Installation
 
-## Requirements
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/plp_bookstore.git
+   cd plp_bookstore
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start MongoDB service:
+   - On macOS/Linux:
+   ```bash
+   mongod --dbpath=/data/db
+   ```
+   - windows as an admin
+   ```bash
+   net start MongoDB
+   ```
+## 🛠️ Usage
+1. Populate the Database
+Run the insertion script to create the plp_bookstore database and books collection
+```bash
+node insert_books.js
+```
+This will:
+- Create a new MongoDB database
+- Insert 12 sample book documents
+- Display the inserted books in the console
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- MongoDB Shell (mongosh) or MongoDB Compass
+2. Execute Queries
+Run all the implemented MongoDB queries:
+```bash
+node queries.js
+```
+## 📋 Implemented Features
+Task 1: MongoDB Setup
+Database creation: plp_bookstore
 
-## Submission
+Collection creation: books
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+Document insertion with proper schema
 
-1. Complete all tasks in the assignment
-2. Add your `queries.js` file with all required MongoDB queries
-3. Include a screenshot of your MongoDB database
-4. Update the README.md with your specific setup instructions
+Task 2: Basic CRUD Operations
+✅ Find all books in specific genre
 
-## Resources
+✅ Find books published after certain year
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [MongoDB University](https://university.mongodb.com/)
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+✅ Find books by specific author
+
+✅ Update price of specific book
+
+✅ Delete book by title
+
+Task 3: Advanced Queries
+✅ Combined filters (in stock + published after 2010)
+
+✅ Field projection (title, author, price only)
+
+✅ Sorting (price ascending/descending)
+
+✅ Pagination (limit + skip)
+
+Task 4: Aggregation Pipeline
+✅ Average price by genre
+
+✅ Most prolific author
+
+✅ Books count by publication decade
+
+Task 5: Indexing
+✅ Single index on title field
+
+✅ Compound index on author and published_year
+
+✅ Performance comparison using explain()
+
