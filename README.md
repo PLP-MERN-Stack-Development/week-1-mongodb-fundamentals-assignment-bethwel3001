@@ -27,7 +27,7 @@ plp_bookstore/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/plp_bookstore.git
+   git https://github.com/PLP-MERN-Stack-Development/week-1-mongodb-fundamentals-assignment-bethwel3001
    cd plp_bookstore
    ```
 2. Install dependencies:
