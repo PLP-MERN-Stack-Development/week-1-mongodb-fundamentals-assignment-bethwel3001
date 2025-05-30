@@ -1,4 +1,3 @@
-// MongoDB queries for PLP Bookstore
 const { MongoClient } = require('mongodb');
 const uri = 'mongodb://localhost:27017';
 const dbName = 'plp_bookstore';
